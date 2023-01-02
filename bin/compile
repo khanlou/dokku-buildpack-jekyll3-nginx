@@ -55,7 +55,7 @@ if [ ! -f $BUILD_DIR/.gems/bin/jekyll ]; then
 
     if [ -f $BUILD_DIR/Gemfile ]; then
       gem install bundler --no-rdoc --no-ri | indent
-	elif
+	else
       # Newer versions depend on ruby_dep which needs newer ruby versions
       gem install listen -v "< 3.1" --no-rdoc --no-ri | indent
 
