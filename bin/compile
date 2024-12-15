@@ -19,14 +19,14 @@ function indent() {
   esac
 }
 
-echo "-----> Installing Ruby 3.2.1"
+echo "-----> Installing Ruby 3.2.4"
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/garnieretienne/rvm-download.git ~/.rbenv/plugins/rvm-download
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-rbenv download 3.2.1
+rbenv download 3.2.4
 rbenv rehash
-rbenv local 3.2.1
-rbenv global 3.2.1
+rbenv local 3.2.4
+rbenv global 3.2.4
 
 # build nginx config unless overridden by user
 if [ ! -f $BUILD_DIR/conf/nginx.conf ]; then
